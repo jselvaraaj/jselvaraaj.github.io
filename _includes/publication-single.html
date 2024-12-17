@@ -1,0 +1,21 @@
+{% include base_path %}
+
+{% if post.id %}
+{% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% else %}
+{% assign title = post.title %}
+{% endif %}
+
+<table>
+    <tr>
+        <td style="width: 300px"></td>
+        <td>
+            <div>
+                <h2 style="margin-top: 10px; margin-bottom: 0px;">{{ title }}</h2>
+
+                <h3 style="margin-top: 10px; margin-bottom: 0px;">{{post.excerpt}}</h3> 
+
+            </div>
+        </td>
+    </tr>
+</table>

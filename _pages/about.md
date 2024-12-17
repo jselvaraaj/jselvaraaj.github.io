@@ -7,23 +7,29 @@ redirect_from:
   - /about.html
 ---
 
-hi im joseph selvaraaj. brief description of me.
+i am currently a software engineer in lucid software's emerging integrations team. i got my B.S Computer Science, B.S Mathematics and B.B.A Finance from UMass Amherst in 2023.
 
 ---
 
-brief description of research interests.
+my research interests are to use deep learning/deep RL to solve control theory problems, specifically autonomous systems. 
+
+at UMass, i studied applying neural differential equations for episode trajectory modeling of grid environment as part of my undergrad honors thesis with Prof. Bruno Castro da Silva.
 
 ---
 
 # Highlights
-brief highlight of projects.
 
----
+gym-grdiverse on rllib
 
-brief description of what i do outside of research.
+applications-of-NDE
+
+yolov5-on-lidar
+
+important-sampled-RL-models
 
 ---
 
 # Recent News
-- 1
-- 2
+- july 2024: informally research with Andrea Baisero on Memory Reactive Policy.
+- june 2023: joined lucid software as software engineer.
+- may 2023: finished my honors thesis on Sequential Rollouts with Neural Ordinary Differential Equations.
