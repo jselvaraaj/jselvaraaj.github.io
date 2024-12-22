@@ -8,11 +8,20 @@
 
 <table>
     <tr>
-        <td style="width: 300px"></td>
+        <td style="width: 300px">
+            <img src=
+              {% if post.image_path contains "://" %}
+                "{{ post.image_path }}"
+              {% else %}
+                "{{ post.image_path | prepend: "/images/" | prepend: base_path }}"
+              {% endif %}
+            alt="{% if f.alt %}{{ f.alt }}{% endif %}">
+        </td>
         <td>
             <div>
-                <h2 style="margin-top: 10px; margin-bottom: 0px;">{{ title }}</h2>
-
+                <a href= "{{ post.link }}">
+                    <h2 style="margin-top: 10px; margin-bottom: 0px;">{{ title }}</h2>
+                </a>
                 <h3 style="margin-top: 10px; margin-bottom: 0px;">{{post.excerpt}}</h3> 
 
             </div>
