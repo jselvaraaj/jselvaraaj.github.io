@@ -10,7 +10,7 @@ author_profile: true
 
 {% include base_path %}
 
-Theses
+theses
 ======
 {% for post in site.publications reversed %}
   {% if post.category contains "thesis" %}

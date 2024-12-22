@@ -1,5 +1,5 @@
 ---
-title: "Sequential Rollouts with Neural Ordinary Differential Equations"
+title: "sequential rollouts with neural ordinary differential equations"
 collection: publications
 category: thesis
 permalink: /publication/2023-sequential-rollouts-with-neural-ordinary-differential-equations
