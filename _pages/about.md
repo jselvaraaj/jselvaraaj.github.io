@@ -8,10 +8,13 @@ redirect_from:
 feature_row:
   - title: pomdp in grid environment with rllib 
     image_path: key_door.gif
+    url: https://github.com/jselvaraaj/memoryReactiveControl/tree/main
   - title: sequential rollouts with neural ordinary differential equations
     image_path: trajectory_modeling_NDE.png
+    url: https://drive.google.com/file/d/1SVuLQSOrtaSTHUsr1soHKxgw2R9sRfnd/view
   - title: yolov5 on lidar images
     image_path: yolov5_lidar.png
+    url: https://github.com/jselvaraaj/yolov5-on-lidar
 ---
 
 i am currently a software engineer in lucid software's emerging integrations team. alongside my work, i also pursue independent research on robotics-related domains. i got my b.s computer science, b.s mathematics and b.b.a finance from umass amherst in 2023.

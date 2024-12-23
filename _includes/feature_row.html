@@ -20,30 +20,31 @@
       <div class="archive__item">
         {% if f.image_path %}
           <div class="archive__item-teaser">
-            <img src=
-              {% if f.image_path contains "://" %}
-                "{{ f.image_path }}"
-              {% else %}
-                "{{ f.image_path | prepend: "/images/" | prepend: base_path }}"
-              {% endif %}
-            alt="{% if f.alt %}{{ f.alt }}{% endif %}"
-            >
+            <a href="{{f.url}}" style="text-decoration: none;">
+              <img src=
+                {% if f.image_path contains "://" %}
+                  "{{ f.image_path }}"
+                {% else %}
+                  "{{ f.image_path | prepend: "/images/" | prepend: base_path }}"
+                {% endif %}
+              alt="{% if f.alt %}{{ f.alt }}{% endif %}"
+              >
+          </a>
           </div>
         {% endif %}
 
         <div class="archive__item-body" style="text-align: center; text-decoration: none;">
           {% if f.title %}
-            <h4 class="archive__item-title">{{ f.title }}</h4>
+            <h4 class="archive__item-title">
+              <!-- {{ f.title }} -->
+              <a href="{{f.url}}" style="text-decoration: none;">{{ f.title }}</a>
+            </h4>
           {% endif %}
 
           {% if f.excerpt %}
             <div class="archive__item-excerpt">
               {{ f.excerpt | markdownify }}
             </div>
-          {% endif %}
-
-          {% if f.url %}
-            <p><a href="{{ f_url }}" class="btn {{ f.btn_class }}">{{ f.btn_label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a></p>
           {% endif %}
         </div>
       </div>
