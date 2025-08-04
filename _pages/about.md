@@ -2,33 +2,42 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle:
 
 profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  # align: right
+  # image: prof_pic.jpg
+  # image_circular: false # crops the image to make it circular
+  # more_info: 
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+social: false # includes social icons at the bottom of the page
 
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  limit: 10 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My broad research interests focus on advancing multi agent autonomous systems by designing algorithms and systems that are 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+1. theoretically grounded and efficient under some notion of efficiency, 
+2. scalable to complex problems like sequential social dilemmas,
+3. simple to understand and implement. 
+
+To that end, I am exploring how deep learning, deep RL, deep MARL as a tool be combined with insights from pure and applied mathematics. 
+
+---
+
+**Bio:** I am currently a software engineer in Lucid Software's Cards 2 team. Alongside my work, I also pursue independent research on _multi agent reinforcement learning_. I got my B.S computer science, B.S mathematics and B.B.A finance from UMass Amherst in 2023.
+
+At UMass, I studied applying neural differential equations for episode trajectory modeling of grid environment as part of my undergraduate honors thesis with Prof. Bruno Castro da Silva.
+
+---
+
