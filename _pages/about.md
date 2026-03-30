@@ -35,7 +35,7 @@ To that end, I am exploring how deep learning, deep RL, deep MARL as a tool can 
 
 ---
 
-**Bio:** I am currently a software engineer in Lucid Software's Cards 2 team. Alongside my work, I also pursue independent research on _multi agent reinforcement learning_. I got my B.S computer science, B.S mathematics and B.B.A finance from UMass Amherst in 2023.
+**Bio:** Incoming PhD student at MIT AeroAstro and currently a software engineer in Lucid Software's Agility team. Alongside my work, I also pursue independent research on _multi agent reinforcement learning_. I got my B.S computer science, B.S mathematics and B.B.A finance from UMass Amherst in 2023.
 
 At UMass, I studied applying neural differential equations for episode trajectory modeling of grid environment as part of my undergraduate honors thesis with [Prof. Bruno Castro da Silva](https://people.cs.umass.edu/~bsilva/).
 
