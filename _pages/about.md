@@ -24,8 +24,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-
-My broad research interests focus on advancing multi agent autonomous systems by designing algorithms and systems that are 
+I am an incoming PhD student at MIT AeroAstro. My broad research interests focus on advancing multi agent autonomous systems by designing algorithms and systems that are 
 
 1. theoretically grounded and efficient under different notions of efficiency, 
 2. scalable to complex problems like sequential social dilemmas,
@@ -35,7 +34,7 @@ To that end, I am exploring how deep learning, deep RL, deep MARL as a tool can 
 
 ---
 
-**Bio:** Incoming PhD student at MIT AeroAstro and currently a software engineer in Lucid Software's Agility team. Alongside my work, I also pursue independent research on _multi agent reinforcement learning_. I got my B.S computer science, B.S mathematics and B.B.A finance from UMass Amherst in 2023.
+**Bio:** Currently a software engineer in Lucid Software's Agility team. Alongside my work, I also pursue independent research on _multi agent reinforcement learning_. I got my B.S computer science, B.S mathematics and B.B.A finance from UMass Amherst in 2023.
 
 At UMass, I studied applying neural differential equations for episode trajectory modeling of grid environment as part of my undergraduate honors thesis with [Prof. Bruno Castro da Silva](https://people.cs.umass.edu/~bsilva/).
 
