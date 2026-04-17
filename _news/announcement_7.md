@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-_Informal_ research with [Jasmine Aloor](https://jaroan.github.io/jasminejerrya/) on Sequential Social Dilemmas.
+_Informal_ research with Jasmine Aloor on Sequential Social Dilemmas.
