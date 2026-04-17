@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-_Informal_ work with [Jasmine Aloor](https://jaroan.github.io/jasminejerrya/) on [JAX implementation](https://github.com/jselvaraaj/JaxFairMARL) of [Fair MARL](https://jaroan.github.io/jasminejerrya/Fair_MARL.html).
+_Informal_ work with Jasmine Aloor on [JAX implementation](https://github.com/jselvaraaj/JaxFairMARL) of [Fair MARL](https://jaroan.github.io/jasminejerrya/Fair_MARL.html).
