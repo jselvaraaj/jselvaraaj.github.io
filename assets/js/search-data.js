@@ -9,14 +9,7 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
-          title: "publications",
-          description: "Research publications and undergraduate honors thesis by Joseph Selvaraaj.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/publications/";
-          },
-        },{id: "news-research-assistant-for-prof-chengbo-ai",
+  },{id: "news-research-assistant-for-prof-chengbo-ai",
           title: 'Research Assistant for Prof. Chengbo Ai',
           description: "",
           section: "News",},{id: "news-completed-honors-thesis-on-sequential-rollouts-with-neural-ordinary-differential-equations",
