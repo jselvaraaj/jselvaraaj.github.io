@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-_Informal_ research with [Andrea Baisero](https://www.khoury.northeastern.edu/home/abaisero/) on [memory reactive policy](https://github.com/jselvaraaj/memoryReactiveControl).
+Investigated [memory-reactive policies](https://github.com/jselvaraaj/memoryReactiveControl) with [Andrea Baisero](https://www.khoury.northeastern.edu/home/abaisero/).

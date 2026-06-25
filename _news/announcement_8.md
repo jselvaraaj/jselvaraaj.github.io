@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-JAX [implementation](https://github.com/jselvaraaj/JaxVMAS) of VMAS simulator that supports Football and MPE environments.
+Extended the VMAS simulator with Football and MPE environments in [JaxVMAS](https://github.com/jselvaraaj/JaxVMAS).

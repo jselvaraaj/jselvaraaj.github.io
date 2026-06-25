@@ -2,13 +2,12 @@
 layout: about
 title: about
 permalink: /
+description: Joseph Selvaraaj is a grad student in MIT AeroAstro's DINaMo group, advised by Hamsa Balakrishnan, researching autonomous systems and control.
+keywords: Joseph Selvaraaj, MIT AeroAstro, DINaMo group, Hamsa Balakrishnan, autonomous systems, control, safety
 subtitle:
 
 profile:
-  # align: right
-  # image: prof_pic.jpg
-  # image_circular: false # crops the image to make it circular
-  # more_info: 
+  align: right
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
@@ -24,20 +23,18 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
+I am a grad student in the [DINaMo group](https://dinamo.mit.edu/) at MIT [AeroAstro](https://aeroastro.mit.edu/) advised by [Prof. Hamsa Balakrishnan](https://www.mit.edu/~hamsa/). My research focuses on advancing multi-agent autonomous systems by designing algorithms and systems that are:
 
-My broad research interests focus on advancing multi agent autonomous systems by designing algorithms and systems that are 
+1. theoretically grounded and efficient under different notions of efficiency;
+2. scalable to complex problems such as sequential social dilemmas; and
+3. simple to understand and implement.
 
-1. theoretically grounded and efficient under different notions of efficiency, 
-2. scalable to complex problems like sequential social dilemmas,
-3. simple to understand and implement. 
-
-To that end, I am exploring how deep learning, deep RL, deep MARL as a tool can be combined with insights from pure and applied mathematics. 
-
----
-
-**Bio:** I am currently a software engineer in Lucid Software's Cards 2 team. Alongside my work, I also pursue independent research on _multi agent reinforcement learning_. I got my B.S computer science, B.S mathematics and B.B.A finance from UMass Amherst in 2023.
-
-At UMass, I studied applying neural differential equations for episode trajectory modeling of grid environment as part of my undergraduate honors thesis with [Prof. Bruno Castro da Silva](https://people.cs.umass.edu/~bsilva/).
+I am also interested in safety of autonomous systems.
 
 ---
 
+**Bio:** Before starting grad school, I worked as a software engineer at Lucid Software. I earned B.S. degrees in computer science and mathematics and a B.B.A. in finance from UMass Amherst in 2023.
+
+At UMass Amherst, I studied neural differential equations for modeling episode trajectories in grid environments as part of my undergraduate honors thesis with [Prof. Bruno Castro da Silva](https://people.cs.umass.edu/~bsilva/).
+
+---

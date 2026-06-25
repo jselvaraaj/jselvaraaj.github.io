@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-_Informal_ work with [Siddharth Nayak](https://nsidn98.github.io/) on [JAX implementation](https://github.com/jselvaraaj/JaxInforMARL) of [InforMARL](https://nsidn98.github.io/InforMARL/).
+Built a [JAX implementation](https://github.com/jselvaraaj/JaxInforMARL) of [InforMARL](https://nsidn98.github.io/InforMARL/) with [Siddharth Nayak](https://nsidn98.github.io/).

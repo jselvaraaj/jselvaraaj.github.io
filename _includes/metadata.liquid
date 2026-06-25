@@ -15,33 +15,49 @@
 {% endif %}
 
 {% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
+{% assign author_name = author_name | strip %}
+{% if site.title == 'blank' %}
+  {% assign site_title = author_name %}
+{% else %}
+  {% assign site_title = site.title %}
+{% endif %}
+{% assign is_home = false %}
+{% if page.url == '/' or page.permalink == '/' %}
+  {% assign is_home = true %}
+{% endif %}
+{% if is_home %}
+  {% assign meta_title = site_title %}
+{% elsif page.title == null or page.title == '' or page.title == 'blank' %}
+  {% capture meta_title %}{{ page.date | date: '%Y' }} | {{ site_title }}{% endcapture %}
+{% else %}
+  {% capture meta_title %}{{ page.title }} | {{ site_title }}{% endcapture %}
+{% endif %}
+{% assign meta_title = meta_title | strip %}
+{% assign meta_description = page.description | default: site.description | strip %}
+{% assign canonical_url = page.url | replace: 'index.html', '' | absolute_url %}
+{% assign meta_image = page.og_image | default: site.og_image %}
 
 <!-- Standard metadata -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>
-  {% if site.title == 'blank' %}
-    {% capture title %}{{ author_name }}{% endcapture %}
-  {% else %}
-    {% capture title %}{{ site.title }}{% endcapture %}
-  {% endif %}
-  {% if page.url == '/blog/index.html' %}
-    {{ page.title }} | {{ title }}
-  {% elsif page.title != 'blank' and page.url != '/' %}
-    {% if page.title == null or page.title == '' %}
-      {{ page.date | date: '%Y' }} | {{ title }}
-    {% else %}
-      {{ page.title }} | {{ title }}
-    {% endif %}
-  {% else %}
-    {{ title }}
-  {% endif %}
-</title>
+<title>{{ meta_title }}</title>
 <meta name="author" content="{{ author_name }}">
-<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="description" content="{{ meta_description }}">
 {% if page.keywords or site.keywords %}
   <meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+{% endif %}
+{% if page.robots %}
+  <meta name="robots" content="{{ page.robots }}">
+{% endif %}
+{% if site.data.socials.github_username %}
+  <link rel="me" href="https://github.com/{{ site.data.socials.github_username }}">
+{% endif %}
+{% if site.data.socials.scholar_userid %}
+  <link rel="me" href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}">
+{% endif %}
+{% if site.data.socials.x_username %}
+  <link rel="me" href="https://x.com/{{ site.data.socials.x_username }}">
 {% endif %}
 
 {% assign is_blog_post = false %}
@@ -53,26 +69,32 @@
 
 {% if site.serve_og_meta %}
   <!-- OpenGraph -->
-  <meta property="og:site_name" content="{{ title }}">
-  <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{% if page.title %}{{ title }} | {{ page.title }}{% else %}{{ title }}{% endif %}">
-  <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  {% if page.og_image or site.og_image %}
-    <meta property="og:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
+  <meta property="og:site_name" content="{{ site_title }}">
+  <meta property="og:type" content="{% if is_home %}profile{% elsif is_blog_post %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{{ meta_title }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:description" content="{{ meta_description }}">
+  {% if meta_image %}
+    <meta property="og:image" content="{{ meta_image }}">
+    <meta property="og:image:alt" content="Profile image of {{ author_name }}">
   {% endif %}
   <meta property="og:locale" content="{{ site.lang }}">
+  {% if is_home %}
+    <meta property="profile:first_name" content="{{ site.first_name }}">
+    <meta property="profile:last_name" content="{{ site.last_name }}">
+  {% endif %}
 
   <!-- Twitter card -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ title }}{% endif %}">
-  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  {% if page.og_image or site.og_image %}
-    <meta name="twitter:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">
+  <meta name="twitter:card" content="{% if meta_image %}summary_large_image{% else %}summary{% endif %}">
+  <meta name="twitter:title" content="{{ meta_title }}">
+  <meta name="twitter:description" content="{{ meta_description }}">
+  {% if meta_image %}
+    <meta name="twitter:image" content="{{ meta_image }}">
+    <meta name="twitter:image:alt" content="Profile image of {{ author_name }}">
   {% endif %}
-  {% if site.x_username %}
-    <meta name="twitter:site" content="@{{ site.x_username }}">
-    <meta name="twitter:creator" content="@{{ site.x_username }}">
+  {% if site.data.socials.x_username %}
+    <meta name="twitter:site" content="@{{ site.data.socials.x_username }}">
+    <meta name="twitter:creator" content="@{{ site.data.socials.x_username }}">
   {% endif %}
 {% endif %}
 
@@ -210,7 +232,7 @@
         {% capture link %}{{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
       {% when 'x_username' %}
-        {% capture link %}https://twitter.com/{{ social[1] }}{% endcapture %}
+        {% capture link %}https://x.com/{{ social[1] }}{% endcapture %}
         {% assign sameaslinks = sameaslinks | push: link %}
       {% when 'youtube_id' %}
         {% capture link %}https://youtube.com/@{{ social[1] }}{% endcapture %}
@@ -225,20 +247,68 @@
 
   <script type="application/ld+json">
     {
-        "author":
+      "@context": "https://schema.org",
+      "@graph": [
         {
-            "@type": "Person",
-            "name": "{{ author_name }}"
+          "@type": "Person",
+          "@id": {{ site.url | append: "/#person" | jsonify }},
+          "name": {{ author_name | jsonify }},
+          "alternateName": "jselvaraaj",
+          "url": {{ site.url | append: "/" | jsonify }},
+          "email": {{ site.data.socials.email | jsonify }},
+          "jobTitle": "Graduate Student",
+          "description": {{ site.description | strip | jsonify }},
+          "image": {{ meta_image | jsonify }},
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Massachusetts Institute of Technology",
+            "alternateName": "MIT",
+            "url": "https://www.mit.edu/"
+          },
+          "memberOf": {
+            "@type": "ResearchOrganization",
+            "name": "DINaMo Group",
+            "url": "https://aeroastro.mit.edu/dinamo-group/",
+            "parentOrganization": {
+              "@type": "CollegeOrUniversity",
+              "name": "Massachusetts Institute of Technology",
+              "alternateName": "MIT",
+              "url": "https://www.mit.edu/"
+            }
+          },
+          "sameAs": {{ sameaslinks | jsonify }}
         },
-        "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
-        "@type": "{% if is_blog_post %}BlogPosting{% else %}WebSite{% endif %}",
-        "description": "{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description }}{% endif %}",
-        "headline": "{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}",
-        {% if sameaslinks != blank %}
-        "sameAs": {{ sameaslinks | jsonify }},
-        {% endif %}
-        "name": "{{ author_name }}",
-        "@context": "https://schema.org"
+        {
+          "@type": "WebSite",
+          "@id": {{ site.url | append: "/#website" | jsonify }},
+          "url": {{ site.url | append: "/" | jsonify }},
+          "name": {{ site_title | jsonify }},
+          "description": {{ site.description | strip | jsonify }},
+          "publisher": {
+            "@id": {{ site.url | append: "/#person" | jsonify }}
+          }
+        },
+        {
+          "@type": "{% if is_home %}ProfilePage{% elsif is_blog_post %}BlogPosting{% else %}WebPage{% endif %}",
+          "@id": {{ canonical_url | append: "#webpage" | jsonify }},
+          "url": {{ canonical_url | jsonify }},
+          "name": {{ meta_title | jsonify }},
+          "headline": {{ meta_title | jsonify }},
+          "description": {{ meta_description | jsonify }},
+          "isPartOf": {
+            "@id": {{ site.url | append: "/#website" | jsonify }}
+          },
+          {% if is_home %}
+          "mainEntity": {
+            "@id": {{ site.url | append: "/#person" | jsonify }}
+          }
+          {% else %}
+          "author": {
+            "@id": {{ site.url | append: "/#person" | jsonify }}
+          }
+          {% endif %}
+        }
+      ]
     }
   </script>
 {% endif %}

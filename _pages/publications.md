@@ -2,8 +2,8 @@
 layout: page
 permalink: /publications/
 title: publications
-description: publications in reversed chronological order.
-nav: true
+description: Research publications and undergraduate honors thesis by Joseph Selvaraaj.
+nav: false
 nav_order: 2
 ---
 
