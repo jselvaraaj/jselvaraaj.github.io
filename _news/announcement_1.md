@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2022-09-10 15:59:00-0400 # only year and month is accurate
+date: 2024-07-20 07:59:00-0400
 inline: true
 related_posts: false
 ---
 
-Research Assistant for [Prof. Chengbo Ai](https://www.umass.edu/engineering/about/directory/chengbo-ai)
+[Implemented](https://github.com/jselvaraaj/memoryReactiveControl) PPO to solve partially observable variations of gridworld environment.
