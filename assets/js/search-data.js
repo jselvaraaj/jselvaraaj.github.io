@@ -9,16 +9,13 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "news-implemented-ppo-to-solve-partially-observable-variations-of-gridworld-environment",
-          title: 'Implemented PPO to solve partially observable variations of gridworld environment.',
+  },{id: "software-released-jaxinformarl-a-jax-implementation-of-informarl",
+          title: 'Released JaxInforMARL, a JAX implementation of InforMARL.',
           description: "",
-          section: "News",},{id: "news-built-a-jax-implementation-of-informarl",
-          title: 'Built a JAX implementation of InforMARL.',
+          section: "Software",},{id: "software-released-jaxvmas-a-jax-implementation-of-vmas-with-football-and-mpe-environments",
+          title: 'Released JaxVMAS, a JAX implementation of VMAS with Football and MPE environments.',
           description: "",
-          section: "News",},{id: "news-extended-the-vmas-simulator-with-football-and-mpe-environments-in-jaxvmas",
-          title: 'Extended the VMAS simulator with Football and MPE environments in JaxVMAS.',
+          section: "Software",},{id: "software-released-jaxfairmarl-a-jax-implementation-of-fair-marl",
+          title: 'Released JaxFairMARL, a JAX implementation of Fair MARL.',
           description: "",
-          section: "News",},{id: "news-built-a-jax-implementation-of-fair-marl",
-          title: 'Built a JAX implementation of Fair MARL.',
-          description: "",
-          section: "News",},];
+          section: "Software",},];
