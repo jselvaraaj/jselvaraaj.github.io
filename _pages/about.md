@@ -23,13 +23,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a grad student in the [DINaMo group](https://dinamo.mit.edu/) at MIT [AeroAstro](https://aeroastro.mit.edu/) advised by [Prof. Hamsa Balakrishnan](https://www.mit.edu/~hamsa/). My research focuses on advancing multi-agent autonomous systems by designing algorithms and systems that are:
-
-1. theoretically grounded and efficient under different notions of efficiency;
-2. scalable to complex problems such as sequential social dilemmas; and
-3. simple to understand and implement.
-
-I am also interested in safety of autonomous systems.
+I am a grad student in the [DINaMo group](https://dinamo.mit.edu/) at MIT [AeroAstro](https://aeroastro.mit.edu/) advised by [Prof. Hamsa Balakrishnan](https://www.mit.edu/~hamsa/). My broad research interest is to make robots that can operate safely in real-world enviornments alongside other robots. To that end, I draw ideas from control theory, optimization, game theory and artificial intelligence. 
 
 ---
 
