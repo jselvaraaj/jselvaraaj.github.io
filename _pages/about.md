@@ -12,6 +12,11 @@ profile:
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 
+selected_software:
+  enabled: true
+  scrollable: true
+  limit: 3
+
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items

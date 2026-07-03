@@ -140,6 +140,10 @@ collections:
     defaults:
       layout: post
     output: false
+  software:
+    defaults:
+      layout: post
+    output: false
   projects:
     output: false
 

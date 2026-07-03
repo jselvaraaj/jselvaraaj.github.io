@@ -41,11 +41,18 @@ layout: default
     <div class="clearfix">{{ content }}</div>
 
     <!-- News -->
-    {% if page.announcements and page.announcements.enabled %}
+    {% if page.announcements and page.announcements.enabled and site.news != blank %}
       <h2>
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
       </h2>
       {% include news.liquid limit=true %}
+    {% endif %}
+
+    <!-- Selected Software -->
+    {% assign software_size = site.software | size %}
+    {% if page.selected_software and page.selected_software.enabled and software_size > 0 %}
+      <h2 class="selected-software-heading">selected software</h2>
+      {% include selected_software.liquid limit=true %}
     {% endif %}
 
     <!-- Latest posts -->
