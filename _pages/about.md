@@ -28,7 +28,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a grad student in the [DINaMo group](https://dinamo.mit.edu/) at MIT [AeroAstro](https://aeroastro.mit.edu/) advised by [Prof. Hamsa Balakrishnan](https://www.mit.edu/~hamsa/). My broad research interest is to build robots that can operate safely alongside other robots. To that end, I draw on ideas from **control theory, optimization, game theory, and artificial intelligence**.
+I am a grad student in the [DINaMo group](https://dinamo.mit.edu/) at MIT [AeroAstro](https://aeroastro.mit.edu/) advised by [Prof. Hamsa Balakrishnan](https://www.mit.edu/~hamsa/). I want to make a swarm of independent robots cooperate, using ideas from game theory, control and learning.
 
 ---
 
